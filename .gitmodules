@@ -1,0 +1,3 @@
+[submodule "riscof/riscof-plugins"]
+	path = riscof/riscof-plugins
+	url = https://gitlab.com/incoresemi/riscof-plugins.git

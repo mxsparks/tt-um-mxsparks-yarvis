@@ -1,5 +1,5 @@
 target = yarvis_cmodel
-sources = main.c mem.c yarvis.c
+sources = main.c mem.c yarvis_multicycle.c
 objects = ${sources:.c=.o}
 depends = ${objects:.o=.d}
 

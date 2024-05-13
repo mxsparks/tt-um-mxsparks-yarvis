@@ -3,9 +3,13 @@
 
 #if RV64I
 typedef uint64_t memaddr_t, memword_t;
+typedef int64_t smemword_t;
 #else
 typedef uint32_t memaddr_t, memword_t;
+typedef int32_t smemword_t;
 #endif
+
+#define XLEN (8 * sizeof(memword_t))
 
 typedef struct {
     memaddr_t address;

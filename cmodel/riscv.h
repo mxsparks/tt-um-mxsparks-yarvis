@@ -42,7 +42,8 @@ typedef enum {
 
 typedef union {
     struct {
-        unsigned int opcode : 7;
+        unsigned int quadrant:2;
+        unsigned int opcode : 5;
         unsigned int rd     : 5;
         unsigned int funct3 : 3;
         unsigned int rs1    : 5;
@@ -50,14 +51,16 @@ typedef union {
         unsigned int funct7 : 7;
     } r;
     struct {
-        unsigned int opcode : 7;
+        unsigned int quadrant:2;
+        unsigned int opcode : 5;
         unsigned int rd     : 5;
         unsigned int funct3 : 3;
         unsigned int rs1    : 5;
         unsigned int imm11_0: 12;
     } i;
     struct {
-        unsigned int opcode : 7;
+        unsigned int quadrant:2;
+        unsigned int opcode : 5;
         unsigned int imm4_0 : 5;
         unsigned int funct3 : 3;
         unsigned int rs1    : 5;
@@ -65,7 +68,8 @@ typedef union {
         unsigned int imm11_5: 7;
     } s;
     struct {
-        unsigned int opcode : 7;
+        unsigned int quadrant:2;
+        unsigned int opcode : 5;
         unsigned int imm11  : 1;
         unsigned int imm4_1 : 4;
         unsigned int funct3 : 3;
@@ -75,14 +79,16 @@ typedef union {
         unsigned int imm12  : 1;
     } b;
     struct {
-        unsigned int opcode : 7;
+        unsigned int quadrant:2;
+        unsigned int opcode : 5;
         unsigned int rd     : 5;
-        unsigned int imm31_12: 20;
+        unsigned int imm31_12:20;
     } u;
     struct {
-        unsigned int opcode : 7;
+        unsigned int quadrant:2;
+        unsigned int opcode : 5;
         unsigned int rd     : 5;
-        unsigned int imm19_12: 8;
+        unsigned int imm19_12:8;
         unsigned int imm11  : 1;
         unsigned int imm10_1: 10;
         unsigned int imm20  : 1;
